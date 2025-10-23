@@ -115,10 +115,6 @@ header {
     padding-bottom: calc(var(--header-space)/2);
     min-height: calc(100vh - (2 * var(--header-space)));
 }
-.inicio{
-    height: 800px;
-    margin-bottom: 1rem;
-}
 
 .footer {
     color:var(--branco);
