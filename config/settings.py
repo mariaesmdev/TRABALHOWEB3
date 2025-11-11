@@ -151,3 +151,16 @@ TEMPLATES = [
 STATICFILES_DIRS = [
     BASE_DIR / "core" / "static",
 ]
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "no-reply@localhost"
+DEFAULT_TO_EMAIL = "cauanovaes15@gmail.com"  
+
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000",
+    "https://localhost:8000",
+    "http://127.0.0.1:8000",
+    "https://127.0.0.1:8000",
+]

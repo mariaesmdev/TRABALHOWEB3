@@ -124,7 +124,7 @@ header {
 .footer_top {
   display: flex;
   gap: 1.25rem;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   padding-bottom: 1rem;
@@ -187,7 +187,7 @@ header {
 .footer_social .social_icons a {
   margin-right: 0.6rem;
   color: inherit;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -241,8 +241,7 @@ header {
         left: 0;
         width: 100%;
         padding: 1rem;
-        backdrop-filter: blur(30px);
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(255, 255, 255, 0.02);
         box-shadow: 0 8px 15px rgba(31, 38, 135, 0.12), inset 0 0 0 15px rgba(255, 255, 255, 0.01);
 

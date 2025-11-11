@@ -70,3 +70,9 @@
     outline: 3px solid rgba(0,0,0,0.08);
     outline-offset: 3px;
 }
+.contato-status { padding: .5rem; margin: .5rem 0; border-radius:6px; }
+.contato-status.success { background:#e6ffed; color:#044d18; border:1px solid #b5f0c6; }
+.contato-status.error { background:#ffecec; color:#7a0b0b; border:1px solid #f2c1c1; }
+
+.field-error { color:#b00; font-size:.95rem; margin-bottom:.5rem; }
+.form-control { width:100%; padding:.5rem; border-radius:4px; border:1px solid #ccc; box-sizing:border-box; }

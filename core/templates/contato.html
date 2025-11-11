@@ -41,20 +41,41 @@
             <section class="contato">
                 <div class="contato__inner">
                     <h2>Entre em contato</h2>
-                    <form class="contato__form" method="post" action="#" novalidate>
-                        <label for="nome">Nome</label>
-                        <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+                    <form id="contato-form" class="contato__form" method="post" action="{% url 'contato' %}" novalidate>
+                        {% csrf_token %}
 
-                        <label for="email">E-mail</label>
-                        <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="contato-status {{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                        {% endif %}
 
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+                        {# Nome field #}
+                        <label for="{{ form.nome.id_for_label }}">Nome</label>
+                        {{ form.nome }}
+                        {% if form.nome.errors %}
+                        <div class="field-error">{{ form.nome.errors.0 }}</div>
+                        {% endif %}
+
+                        {# Email field #}
+                        <label for="{{ form.email.id_for_label }}">E-mail</label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                        <div class="field-error">{{ form.email.errors.0 }}</div>
+                        {% endif %}
+
+                        {# Mensagem field #}
+                        <label for="{{ form.mensagem.id_for_label }}">Mensagem</label>
+                        {{ form.mensagem }}
+                        {% if form.mensagem.errors %}
+                        <div class="field-error">{{ form.mensagem.errors.0 }}</div>
+                        {% endif %}
 
                         <div class="contato__actions">
                             <button type="submit" class="contato__btn">Enviar</button>
                         </div>
                     </form>
+
                 </div>
             </section>
         </div>
@@ -62,11 +83,6 @@
     <footer class="footer">
         <div class="container footer_cont">
             <div class="footer_top">
-                <div class="footer_logo">
-                    <h2>Instituto da Criança Léo de Sá</h2>
-                    <p class="footer_tag">Educação e cultura para crianças e jovens</p>
-                </div>
-
                 <div class="footer_address">
                     <h4>Endereço</h4>
                     <address>
@@ -74,9 +90,23 @@
                         R. Zeferino Reis, 324 — Centro<br>
                         São Gonçalo — RJ • CEP 24440-480
                         </a>
+                      <div class="map-container">
+                        <iframe
+                          src="https://www.google.com/maps?q=R.+Zeferino+Reis+324+São+Gonçalo+RJ&output=embed"
+                          width="250"
+                          height="200"
+                          style="border:0;"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                      </div>
                     </address>
                 </div>
-
+                <div class="footer_logo">
+                    <h2>Instituto da Criança Léo de Sá</h2>
+                    <p class="footer_tag">Promovendo <strong>educação e cultura para o crescimento de crianças e jovens </strong>,valorizamos o aprendizado, a criatividade e o desenvolvimento humano.</p>
+                </div>
                 <div class="footer_links">
                     <h4>Links</h4>
                     <ul>
@@ -94,6 +124,7 @@
                         <a href="https://www.facebook.com/share/1FC9fuGg6p/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com/rosemaryfructuoso" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://wa.me/+5521964027799" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:Rosebioestetic@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
