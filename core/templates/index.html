@@ -39,7 +39,6 @@
     </header>
    
     <main class="main">
-        <div class="container">
             <section class="inicio">
                 <div class="carousel">
                   <div class="carousel-images">
@@ -51,10 +50,10 @@
                 </div>
                 
         <div class="carousel-overlay">
-          <button class="carousel-btn" onclick="window.location.href='sobre.html'" >Conheça nossos projetos</button>
+          <a href="{% url 'projetos' %}" ><button class="carousel-btn" onclick="window.location.href='sobre.html'"" >Conheça nossos projetos</button></a>
         </div>
             </section>
-
+        <div class="container">
             <section class="doacao">
                 <div class="doacao-conteudo">
                     <div class="text-doacao">
@@ -62,7 +61,7 @@
                             A cultura transforma. <br>
                             Com sua doação, ajudamos mais crianças e jovens a descobrirem seus talentos e acreditarem em um futuro melhor.
                     </p>
-                     <button class="btn-doar" onclick="window.location.href='doacao.html'">Fazer Doação </button>
+                     <a href="{% url 'doacao' %}"><button class="btn-doar" onclick="window.location.href='doacao.html'">Fazer Doação </button></a>
                 </div>
 
                 <div class="doacao-conteudo">
@@ -86,7 +85,7 @@
 
                     <div class="botoes-galeria-acao">
                         <a href="{% url 'sobre' %}" class="btn-acao primario">Quero saber mais sobre a ONG</a>
-                        <a href="{% url 'projetos' %}" class="btn-acao secundario">Quero conhecer os projetos</a>
+                        <a href="{% url 'contato' %}" class="btn-acao secundario">Entre em contato conosco</a>
                     </div>
 
 
