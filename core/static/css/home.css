@@ -201,3 +201,42 @@ header .container, footer .container {
     border-color: #0056b3;
     transform: translateY(-2px);
 }
+
+
+
+/* parte do fb */
+.rede-section {
+    margin: 60px auto;
+    padding: 50px 20px;
+    background: #f5f7fa; 
+    border-radius: 20px;
+    text-align: center;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.rede-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002a5c;
+    margin-bottom: 10px;
+}
+
+.rede-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.midia-item {
+    display: flex;
+    justify-content: center;
+}
+
+.midia-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+     max-width: 500px;
+}
